@@ -3,6 +3,7 @@ from testapp.models import Band, Member
 
 
 class BaseTestCase(TestCase):
+    
     def setUp(self):
         self.address_one = 'India'
         self.name_one = 'Mahaveer'
@@ -17,3 +18,4 @@ class BaseTestCase(TestCase):
         self.band_two = Band.objects.create(name=self.name_two, address=self.address_two)
 
         self.member = Member.objects.create(name=self.member_name ,contact=self.member_contact, band=self.band_one)
+
